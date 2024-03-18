@@ -62,7 +62,7 @@ namespace EWallet
 
                             string typeString = GetTransactionTypeDisplay(type);
 
-                            dataGridView1.Rows.Add(id, refNum, "₱ " + amount.ToString("N0"), typeString, createdAt.ToString("MMM dd yyyy h:mm tt"));
+                            dataGridView1.Rows.Add(id, refNum, "₱ " + amount.ToString("N2"), typeString, createdAt.ToString("MMM dd yyyy h:mm tt"));
                         }
                     }
                 }
@@ -79,6 +79,8 @@ namespace EWallet
                     return "Received";
                 case 3:
                     return "Earned";
+                case 4:
+                    return "Payout";
                 default:
                     return "Unknown";
             }

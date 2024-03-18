@@ -65,6 +65,7 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(214, 42);
             textBox1.TabIndex = 33;
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // panel1
             // 
@@ -82,6 +83,7 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(800, 65);
             panel1.TabIndex = 32;
+            panel1.Paint += panel1_Paint;
             // 
             // label6
             // 
@@ -173,6 +175,7 @@
             label7.Size = new Size(169, 50);
             label7.TabIndex = 35;
             label7.Text = "MOiAloq";
+            label7.Click += label7_Click;
             // 
             // EarnMoney
             // 

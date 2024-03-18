@@ -58,13 +58,13 @@ namespace EWallet
         private void Dashboard_Load(object sender, EventArgs e)
         {
             this.RefreshMoney();
-            label7.Text = " Hi " +  User.CurrentUser.Fullname + "!";
+            label7.Text = " Hi " + User.CurrentUser.Fullname + "!";
         }
 
         private void RefreshMoney()
         {
             User.CurrentUser.CalculateUserMoney();
-            label6.Text = "₱ " + User.CurrentUser.money.ToString("N0");
+            label6.Text = "₱ " + User.CurrentUser.money.ToString("N2");
         }
 
         private void label6_Click(object sender, EventArgs e)
@@ -80,6 +80,13 @@ namespace EWallet
         private void Dashboard_Load_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Payout Payout = new Payout();
+            Payout.Show();
         }
     }
 }

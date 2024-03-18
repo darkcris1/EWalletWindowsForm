@@ -29,6 +29,20 @@ namespace EWallet
                     string password = textBox2.Text;
                     string username = textBox1.Text;
 
+                    if (fullname == "")
+                    {
+                        throw new Exception("Enter a valid full name");
+                    }
+                    if (username == "")
+                    {
+                        throw new Exception("Enter a valid password");
+                    }
+                    if (password == "" || password.Length < 5) 
+                    {
+                        throw new Exception("Enter a valid password and must be atleast 5 characters");
+                    }
+                    
+
                     // **Hash the password for security**
                     // Use a secure hashing algorithm like bcrypt or Argon2
                     string hashedPassword = password; // Example using a BCrypt library
@@ -52,13 +66,13 @@ namespace EWallet
                         }
                         else
                         {
-                            MessageBox.Show("Signup failed. Please try again.");
+                            throw new Exception("Signup failed. Please try again.");
                         }
                     }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error: " + ex.Message);
+                    MessageBox.Show("" + ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }

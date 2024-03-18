@@ -41,6 +41,7 @@
             button5 = new Button();
             label6 = new Label();
             label7 = new Label();
+            button6 = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -214,6 +215,22 @@
             label7.TabIndex = 35;
             label7.Text = "Hi Cris!";
             // 
+            // button6
+            // 
+            button6.BackColor = Color.LightBlue;
+            button6.FlatAppearance.BorderSize = 0;
+            button6.FlatStyle = FlatStyle.Flat;
+            button6.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            button6.Location = new Point(405, 207);
+            button6.Margin = new Padding(3, 4, 3, 4);
+            button6.Name = "button6";
+            button6.RightToLeft = RightToLeft.Yes;
+            button6.Size = new Size(358, 51);
+            button6.TabIndex = 33;
+            button6.Text = "Payout";
+            button6.UseVisualStyleBackColor = false;
+            button6.Click += button6_Click;
+            // 
             // Dashboard
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -222,6 +239,7 @@
             Controls.Add(label7);
             Controls.Add(label6);
             Controls.Add(button5);
+            Controls.Add(button6);
             Controls.Add(button2);
             Controls.Add(button4);
             Controls.Add(button1);
@@ -251,5 +269,6 @@
         private Button button5;
         private Label label6;
         private Label label7;
+        private Button button6;
     }
 }

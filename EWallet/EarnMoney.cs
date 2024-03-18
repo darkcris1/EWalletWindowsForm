@@ -30,8 +30,8 @@ namespace EWallet
         {
             if (label7.Text == textBox1.Text)
             {
-                InsertTransaction(int.Parse(User.CurrentUser.Id), 100, 3);
-                MessageBox.Show("You earned ₱ 100", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                InsertTransaction(int.Parse(User.CurrentUser.Id), 0.10, 3);
+                MessageBox.Show("You earned ₱ 0.10", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 string rando = GenerateRandomText();
                 label7.Text = rando;
 
@@ -75,6 +75,19 @@ namespace EWallet
               .Select(s => s[randoms.Next(s.Length)]).ToArray());
 
             return randomText;
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
         }
     }
 }

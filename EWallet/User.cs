@@ -48,6 +48,10 @@ namespace EWallet
                             {
                                 totalAmount += amount;
                             }
+                            else if (type == 4) // Payout (negative)
+                            {
+                                totalAmount -= amount;
+                            }
                             else if (type == 3) // Earned (positive)
                             {
                                 totalAmount += amount;
